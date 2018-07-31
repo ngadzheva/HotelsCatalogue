@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="XML_HotelsCatalogue.xsl"?>
+
+<!DOCTYPE catalogue SYSTEM "XML_HotelsCatalogue.dtd" [
+	<!ENTITY history SYSTEM "images/history/history.jpg" NDATA jpg>
+	<!ENTITY historyRoom1 SYSTEM "images/history/room1.jpg" NDATA jpg>
+	<!ENTITY historyRoom2 SYSTEM "images/history/room2.jpg" NDATA jpg>
+	<!ENTITY lionBansko SYSTEM "images/lionBansko/lionBansko.jpg" NDATA jpg>
+	<!ENTITY lionBanskoRoom1 SYSTEM "images/lionBansko/room1.jpg" NDATA jpg>
+	<!ENTITY lionBanskoRoom2 SYSTEM "images/lionBansko/room2.jpg" NDATA jpg>
+	<!ENTITY lionSunnyBeach SYSTEM "images/lionSunnyBeach/lionSunnyBeach.jpg" NDATA jpg>
+	<!ENTITY lionSunnyBeachRoom1 SYSTEM "images/lionSunnyBeach/room1.jpg" NDATA jpg>
+	<!ENTITY lionSunnyBeachRoom2 SYSTEM "images/lionSunnyBeach/room2.jpg" NDATA jpg>
+	<!ENTITY lionSof SYSTEM "images/lionSofia/lionSofia.jpg" NDATA jpg>
+	<!ENTITY lionSofRoom1 SYSTEM "images/lionSofia/room1.jpg" NDATA jpg>
+	<!ENTITY lionSofRoom2 SYSTEM "images/lionSofia/room2.jpg" NDATA jpg>
+	<!ENTITY ARONIA SYSTEM "images/aroniaBeach/AroniaBeach.jpg" NDATA jpg>
+	<!ENTITY ARONIARoom1 SYSTEM "images/aroniaBeach/room1.jpg" NDATA jpg>
+	<!ENTITY ARONIARoom2 SYSTEM "images/aroniaBeach/room2.jpg" NDATA jpg>
+	<!ENTITY ATLASGoldenSands SYSTEM "images/atlas/Atlas.jpg" NDATA jpg>
+	<!ENTITY ATLASGoldenSandsRoom1 SYSTEM "images/atlas/room1.jpg" NDATA jpg>
+	<!ENTITY ATLASGoldenSandsRoom2 SYSTEM "images/atlas/room2.jpg" NDATA jpg>
+	<!ENTITY ASTERA SYSTEM "images/astera/Astera.jpg" NDATA jpg>
+	<!ENTITY ASTERARoom1 SYSTEM "images/astera/room1.jpg" NDATA jpg>
+	<!ENTITY ASTERARoom2 SYSTEM "images/astera/room2.jpg" NDATA jpg>
+	<!ENTITY ROSTOV SYSTEM "images/rostov/rostov.jpg" NDATA jpg>
+	<!ENTITY ROSTOVRoom1 SYSTEM "images/rostov/room1.jpg" NDATA jpg>
+	<!ENTITY ROSTOVRoom2 SYSTEM "images/rostov/room2.jpg" NDATA jpg>
+	<!ENTITY lionHotels SYSTEM "images/logos/lionLogo.jpg" NDATA jpg>
+	<!ENTITY AHotels SYSTEM "images/logos/aHotelsLogo.jpg" NDATA jpg>
+]>
+
+<catalogue>
+
+<!--==========================Regions=================================-->
+
+	<regions>
+		<region regionID = "BA" hotelRef="LionBansko ASTERABan">
+			<region_name>Банско</region_name>
+		</region>
+		
+		<region regionID = "SB" hotelRef="LionSunnyBeach ARONIABeach">
+			<region_name>Слънчев бряг</region_name>
+		</region>
+		
+		<region regionID = "CO" hotelRef="LionSof">
+			<region_name>София</region_name>
+		</region>
+		
+		<region regionID = "XA" hotelRef="Hist">
+			<region_name>Хасково</region_name>
+		</region>
+		
+		<region regionID = "EN" hotelRef="ROSTOVPle">
+			<region_name>Плевен</region_name>
+		</region>
+		
+		<region regionID = "GS" hotelRef="ATLASGS">
+			<region_name>Златни пясъци</region_name>
+		</region>
+	</regions>
+	
+<!--==========================Chains=================================-->
+	
+	<chains>
+		<chain chainID = "Lion" hotelRef="LionBansko LionSof LionSunnyBeach">
+			<chain_name>Lion Hotels</chain_name>
+			<chain_description>
+				Хотели ЛИОН България е една от малкото български хотелски вериги, които се доказаха на пазара с качество, комфорт и отлично обслужване. Първият хотел от веригата – Хотел Лион София, отваря през Април 2004 г., след него отварят врати и хотел Лион Боровец – Декември 2004 г., Хотел Лион Слънчев Бряг – Май 2005 г., и хотел Лион Банско – Декември 2005 г. С Хотели ЛИОН България можете да изберете почивка на море или на планина, да организирате фирмено или семейно събитие. Екип от професионалисти ще изготви индивидуална оферта, за да удовлетвори всички Ваши нужди и изисквания.	
+			</chain_description>
+			<chain_logo>
+				<logo href="lionHotels"/>
+			</chain_logo>
+		</chain>
+		<chain chainID = "A" hotelRef="ASTERABan ARONIABeach ATLASGS">
+			<chain_name>A Hotels</chain_name>
+			<chain_description>
+				A HOTELS e създадена през 2004, като част от портфолиото на "Св. Св. Константин и Елена холдинг" АД и включва четиризвездни хотели, съчетаващи в себе си стилен интериор, уникално местоположение и ексклузивни услуги.
+				Хотелите са разположени в едни от най-добрите и атрактивни туристически дестинации в България.
+				Независимо от целта на Вашето пътуване – за  почивка или бизнес -  избирайки хотели, част от A HOTELS, Вие ще се насладите на неповторимата атмосфера на лукс и комфорт, ще получите специално отношение, насочено лично и само към Вас.
+			</chain_description>
+			<chain_logo>
+				<logo href="AHotels"/>
+			</chain_logo>
+		</chain>
+	</chains>
+	
+<!--=========================Hotels===================================-->
+	
+	<hotels>
+	
+<!--======================HotelRestaurantHistory======================-->
+	
+		<hotel hotelID="Hist" regionRef="XA">
+			<hotel_name>Hotel Restaurant History</hotel_name>
+			<category>3-звезден</category>
+			<hotel_type>Хотел-ресторант</hotel_type>
+			<address>
+				<city>Хасково</city>
+				<street>Парк Кенана</street>
+			</address>
+			<phone>088 911 1999</phone>
+			<email>hotel.history@abv.bg</email>
+			<description>
+				Хотел - ресторант History, разположен в спокойствието на парк Кенана, предлага уютна обстановка за вашия комфорт и релаксация. Хотелът предоставя лукс и комфорт в 12 двойни стаи и апартаменти с характерен тематичен дизай, всяка от която със специфично наименование. 
+			</description>
+			<more_info>
+				<service>
+					Двор / Градина
+					<characteristic>Тераса</characteristic>
+					<characteristic>Градина</characteristic>
+				</service>
+			
+				<service>
+					Басейн и уелнес
+					<characteristic>Басейн</characteristic>
+					<characteristic>Масаж на цяло тяло</characteristic>
+					<characteristic>Масаж на ръце</characteristic>
+					<characteristic>Масаж на глава</characteristic>
+					<characteristic>Масаж на стъпала</characteristic>
+					<characteristic>Масаж на шия</characteristic>
+					<characteristic>Масаж на гръб</characteristic>
+					<characteristic>Открит плувен басейн</characteristic>
+					<characteristic>Турска/Парна баня</characteristic>
+					<characteristic>Масаж (допълнително заплащане)</characteristic>
+					<characteristic>Сауна</characteristic>
+				</service>
+				
+				<service>
+					Домашни любимци
+					<characteristic type="forbidden">Домашни любимци са забранени.</characteristic>
+				</service>	
+				
+				<service>
+					Дейности
+					<characteristic>Безплатни велосипеди</characteristic>
+					<characteristic>Туризъм</characteristic>
+				</service>	
+				
+				<service>
+					Храни и напитки
+					<characteristic>Ресторант (а-ла-карт)</characteristic>
+				</service>	
+				
+				<service>
+					Интернет
+					<characteristic type="free">Безплатно! Wi-Fi интернет е наличен в хотелските стаи и е без заплащане.</characteristic>
+				</service>	
+				
+				<service>
+					Паркинг
+					<characteristic type="free">Безплатно! Безплатен частен паркинг е достъпен на място (резервация не е необходима).</characteristic>
+					<characteristic>Охраняем паркинг</characteristic>
+				</service>	
+				
+				<service>
+					Услуги
+					<characteristic>Ежедневно подреждане на стаята</characteristic>
+					<characteristic>Обща TV зала</characteristic>
+					<characteristic>Факс/Копирни услуги</characteristic>
+					<characteristic>Пакетиран обяд</characteristic>
+					<characteristic>Гладене (допълнително заплащане)</characteristic>
+					<characteristic>ВИП услуги</characteristic>
+					<characteristic>Пералня (допълнително заплащане)</characteristic>
+					<characteristic>Денонощна рецепция</characteristic>
+					<characteristic>Рум-сървиз</characteristic>
+				</service>
+
+				<service>
+					Общи
+					<characteristic>Климатик</characteristic>
+					<characteristic>Отопление</characteristic>
+					<characteristic>Сейф (допълнително заплащане)</characteristic>
+					<characteristic>Семейни стаи</characteristic>
+				</service>	
+				
+				<service>
+					Политика за пушене
+					<characteristic>Стаи за непушачи</characteristic>
+				</service>
+
+				<service>
+					Персоналът говори няколко езика
+					<characteristic>английски</characteristic>
+					<characteristic>български</characteristic>
+				</service>
+				
+			</more_info>
+			<rooms>
+				<rooms_description>
+					Всички стаи са оборудвани с климатик, плоскоекранен телевизор с кабелни канали и минибар. Включват също собствена баня с вана или душ и сешоар.
+					Гостите на хотел History могат да релаксират в градината. На разположение са 24-часова рецепция, тераса и ресторант, предлагащ френска и италианска кухня.
+				</rooms_description>
+				<rooms_images>
+					<room_image type="1">
+						<image_src href="historyRoom1"/>
+					</room_image>
+					<room_image type="2">
+						<image_src href="historyRoom2"/>
+					</room_image>
+				</rooms_images>
+				<room>
+					<type>Голяма стая с 2 отделни легла</type>
+					<price>
+						<season>
+							<all>100 лв.</all>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Студио</type>
+					<price>
+						<season>
+							<all>120 лв.</all>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Двойна делукс стая</type>
+					<price>
+						<season>
+							<all>120 лв.</all>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Суит с изглед към градина</type>
+					<price>
+						<season>
+							<all>140 лв.</all>
+						</season>
+					</price>
+				</room>
+			</rooms>
+			<image>
+				<src href="history"/>
+			</image>
+		</hotel>
+		
+<!--============================LionBansko========================================-->
+		
+		<hotel hotelID="LionBansko" chainRef = "Lion" regionRef = "BA">
+			<hotel_name>Hotel Lion Bansko</hotel_name>
+			<category>4-звезден</category>
+			<hotel_type>СПА</hotel_type>
+			<address>
+				<city>Банско</city>
+				<street>Ул. Георги Настев</street>
+			</address>
+			<phone>+359 7498 68 00</phone>
+			<email> bansko@hotelslion.bg</email>
+			<site>www.bansko.hotelslion.bg/</site>
+			<description>
+				Четири-звездният хотел Лион в Банско е открит през декември месец 2005 г. в едно от най-красивите и тихи места в България. Хотел Лион Банско предлага пълна гама от услуги и удоволствия, които да ви осигурят едно запомнящо се пътуване. Хотелът разполага със 193 стаи в различни категории: единични стаи, двойни стаи, студиа и апартаменти, предлагащи комфорт и уединение през вашия престой.
+			</description>
+			<more_info>
+				<service>
+					Басейн и уелнес
+					<characteristic>Басейн</characteristic>
+					<characteristic>Фитнес</characteristic>
+					<characteristic>Закрит плувен басейн</characteristic>
+					<characteristic>Турска/Парна баня (допълнително заплащане)</characteristic>
+					<characteristic>Хидромасажна вана/ джакузи (допълнително заплащане)</characteristic>
+					<characteristic>Масаж (допълнително заплащане)</characteristic>
+					<characteristic>Спа &amp; Уелнес център (допълнително заплащане)</characteristic>
+					<characteristic>Фитнес център</characteristic>
+					<characteristic>Сауна (допълнително заплащане)</characteristic>
+				</service>	
+				
+				<service>
+					Ски
+					<characteristic>Ски гардероб</characteristic>
+				</service>	
+				
+				<service>
+					Домашни любимци
+					<characteristic type="forbidden">Домашни любимци са забранени.</characteristic>
+				</service>	
+				
+				<service>
+					Дейности
+					<characteristic>Билярд (допълнително заплащане)</characteristic>
+					<characteristic>Ски услуги</characteristic>
+				</service>	
+				
+				<service>
+					Храни и напитки
+					<characteristic>Специални диетични менюта (по заявка)</characteristic>
+					<characteristic>Бар</characteristic>
+					<characteristic>Ресторант („а ла карт” и шведска маса)</characteristic>
+				</service>	
+				
+				<service>
+					Интернет
+					<characteristic type="free">Безплатно! Wi-Fi интернет е наличен в публични зони и е без заплащане.</characteristic>
+				</service>
+				
+				<service>
+					Паркинг
+					<characteristic type="free">Безплатно! Безплатен обществен паркинг е достъпен на място (резервация не е необходима). </characteristic>
+				</service>	
+				
+				<service>
+					Рецепция
+					<characteristic>Помещение за съхранение на багаж</characteristic>
+					<characteristic>Обменно бюро</characteristic>
+					<characteristic>Денонощна рецепция</characteristic>
+				</service>	
+				
+				<service>
+					Почистване
+					<characteristic>Почистване на обувки</characteristic>
+					<characteristic>Гладене (допълнително заплащане)</characteristic>
+					<characteristic>Химическо чистене (допълнително заплащане)</characteristic>
+					<characteristic>Пералня (допълнително заплащане)</characteristic>
+				</service>
+
+				<service>
+					Удобства за бизнеса
+					<characteristic>Факс/Копирни услуги (допълнително заплащане)</characteristic>
+					<characteristic>Конферентна/Банкетна зала (допълнително заплащане)</characteristic>
+				</service>
+
+				<service>
+					Общи
+					<characteristic>Превоз</characteristic>
+					<characteristic type="free">Трансфер (безплатен)</characteristic>
+					<characteristic>Климатик</characteristic>
+					<characteristic>Магазини в хотела</characteristic>
+					<characteristic>Отопление</characteristic>
+					<characteristic>Коли под наем</characteristic>
+					<characteristic>Пакетиран обяд</characteristic>
+					<characteristic>Магазин за сувенири и подаръци</characteristic>
+					<characteristic>Сейф (допълнително заплащане)</characteristic>
+					<characteristic>Асансьор</characteristic>
+					<characteristic>Фризьорски / Козметичен салон</characteristic>
+					<characteristic>Стаи/Услуги за хора с двигателни увреждания</characteristic>
+				</service>	
+				
+				<service>
+					Политика за пушене
+					<characteristic type="forbidden">Стаи САМО за НЕпушачи</characteristic>
+				</service>	
+				
+				<service>
+					Персоналът говори няколко езика
+					<characteristic>английски</characteristic>
+					<characteristic>български</characteristic>
+				</service>
+			</more_info>
+			<rooms>
+				<rooms_description>
+					В хотела има 167 двойни стаи. Половината от стаите са със спалня, а останалите с две отделни легла. В почти всички стаи има разтегателен диван, на който може да се настани трети човек. Хотелът разполага със стаи, специално пригодени за хора в неравностойно положение. Всяка стая разполага с централно отопление, директен телефон, сателитна телевизия, мини бар, баня с вана и сешоар, плътни завеси.
+					Студиата в хотел Лион Банско са 16 на брой. Те представляват едно голямо помещение със спалня, холна мебел,  кухненски бокс с трапезарна  маса. Студиата са удобни за семейства с едно или две деца. Могат да бъдат настанени и трима възрастни.
+					Апартаментите са 8 на брой. Апартаментът се състои от две отделни помещения с 4 редовни легла. В едната стая има 2 единични легла, холна мебел, кухненски бокс с трапезарна маса. В другата стая има голяма спалня. Апартаментите са с 2 бани. Максималното възможно настаняване в апартамент е 5 възрастни или 4 възрастни и 2 деца.
+				</rooms_description>
+				<rooms_images>
+					<room_image type="1">
+						<image_src href="lionBanskoRoom1"/>
+					</room_image>
+					<room_image type="2">
+						<image_src href="lionBanskoRoom2"/>
+					</room_image>
+				</rooms_images>
+				<room>
+					<type>Двойна стая</type>
+					<price>
+						<season>
+							<low>150 лв.</low>
+							<medium type="1">200 лв.</medium>
+							<medium type="2">170 лв.</medium>
+							<high>280 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Единична стая</type>
+					<price>
+						<season>
+							<low>120 лв.</low>
+							<medium type="1">170 лв.</medium>
+							<medium type="2">130 лв.</medium>
+							<high>280 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Студио</type>
+					<price>
+						<season>
+							<low>180 лв.</low>
+							<medium type="1">260 лв.</medium>
+							<medium type="2">220 лв.</medium>
+							<high>360 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Апартамент</type>
+					<price>
+						<season>
+							<low>300 лв.</low>
+							<medium type="1">420 лв.</medium>
+							<medium type="2">340 лв.</medium>
+							<high>590 лв.</high>
+						</season>
+					</price>
+				</room>
+			</rooms>
+			<image>
+				<src href="lionBansko"/>
+			</image>
+		</hotel>
+		
+<!--=================================LionSunnyBeach====================================-->
+		
+		<hotel hotelID="LionSunnyBeach" chainRef = "Lion" regionRef = "SB">
+			<hotel_name>Hotel Lion Sunny Beach</hotel_name>
+			<category>4-звезден</category>
+			<hotel_type>СПА</hotel_type>
+			<address>
+				<city>к. к. Слънчев Бряг</city>
+			</address>
+			<phone>+359 554 20 850</phone>
+			<email> sunnybeach@hotelslion.bg</email>
+			<site>www.sunnybeach.hotelslion.bg/</site>
+			<description>
+				Хотел Лион Слънчев Бряг отвори врати в началото на месец Юли 2005 г. Комплексът предлага уютно настаняване и прекрасна атмосфера. Идеален е за безгрижна почивка около басейна с напитка от екзотичния бар или за разходка на близкия пясъчен плаж. Този стилен, модерен хотел се намира в северната част на Слънчев бряг, на около 300 м. от плажа. 
+			</description>
+			<more_info>
+				<service>
+					Двор / Градина
+					<characteristic>Градина</characteristic>
+				</service>	
+				
+				<service>
+					Басейн и уелнес
+					<characteristic>Басейн</characteristic>
+					<characteristic>Открит плувен басейн (сезонен)</characteristic>
+					<characteristic>Масаж</characteristic>
+				</service>	
+				
+				<service>
+					Домашни любимци
+					<characteristic type="forbidden">Домашни любимци са забранени.</characteristic>
+				</service>	
+				
+				<service>
+					Дейности
+					<characteristic>Билярд</characteristic>
+				</service>
+
+				<service>
+					Храни и напитки
+					<characteristic>Опции за закуска</characteristic>
+					<characteristic>Бар</characteristic>
+					<characteristic>Ресторант („а ла карт” и шведска маса)</characteristic>
+				</service>	
+				
+				<service>
+					Интернет
+					<characteristic type="free">Безплатно! Wi-Fi интернет е наличен в целия хотел и е без заплащане. </characteristic>
+				</service>	
+				
+				<service>
+					Паркинг
+					<characteristic>Частен паркинг е достъпен на място (резервация не е възможна) и цената е EUR 5 на ден.</characteristic>
+				</service>
+
+				<service>
+					Рецепция
+					<characteristic>Помещение за съхранение на багаж</characteristic>
+					<characteristic>Обменно бюро</characteristic>
+					<characteristic>Денонощна рецепция</characteristic>
+				</service>	
+				
+				<service>
+					Почистване
+					<characteristic>Гладене</characteristic>
+					<characteristic>Химическо чистене</characteristic>
+					<characteristic>Пералня</characteristic>
+				</service>	
+				
+				<service>
+					Общи
+					<characteristic>Климатик</characteristic>
+					<characteristic>Магазини в хотела</characteristic>
+					<characteristic>Отопление</characteristic>
+					<characteristic>Магазин за сувенири и подаръци</characteristic>
+					<characteristic>Сейф</characteristic>
+					<characteristic>Асансьор</characteristic>
+					<characteristic>Фризьорски / Козметичен салон</characteristic>
+					<characteristic>Стаи/Услуги за хора с двигателни увреждания</characteristic>
+					<characteristic>Рум-сървиз</characteristic>
+				</service>
+
+				<service>
+					Политика за пушене
+					<characteristic type="forbidden">Стаи САМО за НЕпушачи</characteristic>
+				</service>	
+				
+				<service>
+					Персоналът говори няколко езика
+					<characteristic>английски</characteristic>
+					<characteristic>български</characteristic>
+				</service>
+			</more_info>
+			<rooms>
+				<rooms_description>
+					В хотела има 184 двойни стаи. Част от стаите са със спалня, а останалите с две отделни легла. В някои от двойните стаи има допълнителна разтегателна мебел за настаняване на трети човек. Хотелът разполага със стаи, специално пригодени за хора в неравностойно положение. Всяка стая разполага с централна климатизация, директен телефон, сателитна телевизия, мини бар, баня с вана и сешоар, плътни завеси.
+					Студиата в хотел Лион Слънчев Бряг са 34 на брой. Те представляват едно голямо помещение със спалня, холна мебел,  трапезарна  маса. Студиата са удобни за семейства с едно или две деца. Могат да бъдат настанени и трима възрастни.
+					Апартаментите са 8 на брой. Те се състоят от две помещения с 4 редовни легла и голяма обща тераса. И двете стаи са със спални. Апартаментите са с 2 бани. Максималното възможно настаняване в апартамент е 5 възрастни или 4 възрастни и 2 деца.
+				</rooms_description>
+				<rooms_images>
+					<room_image type="1">
+						<image_src href="lionSunnyBeachRoom1"/>
+					</room_image>
+					<room_image type="2">
+						<image_src href="lionSunnyBeachRoom2"/>
+					</room_image>
+				</rooms_images>
+				<room>
+					<type>Двойна стая</type>
+					<price>
+						<season>
+							<low>110 лв.</low>
+							<medium type="1">150 лв.</medium>
+							<high>200 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Единична стая</type>
+					<price>
+						<season>
+							<low>75 лв.</low>
+							<medium type="1">105 лв.</medium>
+							<high>140 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Студио</type>
+					<price>
+						<season>
+							<low>130 лв.</low>
+							<medium type="1">180 лв.</medium>
+							<high>230 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Апартамент</type>
+					<price>
+						<season>
+							<low>200 лв.</low>
+							<medium type="1">350 лв.</medium>
+							<high>390 лв.</high>
+						</season>
+					</price>
+				</room>
+			</rooms>
+			<image>
+				<src href="lionSunnyBeach"/>
+			</image>
+		</hotel>
+		
+<!--==================================LionSofia=====================================-->
+		
+		<hotel hotelID="LionSof" chainRef = "Lion" regionRef = "CO">
+			<hotel_name>Hotel Lion Sofia</hotel_name>
+			<category>4-звезден</category>
+			<hotel_type>Хотел-ресторант</hotel_type>
+			<address>
+				<city>София</city>
+				<street>Бул. Мария Луиза 60</street>
+			</address>
+			<phone>+359 2 917 84 00</phone>
+			<email> office@hotelslion.bg</email>
+			<site>www.sofia.hotelslion.bg/</site>
+			<description>
+				Хотел Лион София е разположен в центъра на столицата. Най-важните административни сгради и туристически забележителности са само на минути пешеходно разстояние. Главната търговска улица - бул. Витоша също се намира в непосредствена близост. Придвижването до Летище София отнема около 20 минути. Комбинацията от конкурентни цени, удобство и прекрасно разположение превръщат хотел Лион София в любимо и предпочитано място за всеки гост.
+			</description>
+			<more_info>
+				<service>
+					Уелнес удобства
+					<characteristic>Масаж (допълнително заплащане)</characteristic>
+				</service>
+				
+				<service>
+					Услуги/Екстри
+					<characteristic>Билети за забележителности и спектакли (допълнително заплащане)</characteristic>
+				</service>	
+				
+				<service>
+					Домашни любимци
+					<characteristic type="free">Домашни любимци са разрешени. Може да се изисква такса.</characteristic>
+				</service>	
+				
+				<service>
+					Храни и напитки
+					<characteristic>Ресторант (а-ла-карт)</characteristic>
+					<characteristic>Бар</characteristic>
+				</service>	
+				
+				<service>
+					Интернет
+					<characteristic type="free">Безплатно! Wi-Fi интернет е наличен в целия хотел и е без заплащане. </characteristic>
+				</service>	
+				
+				<service>
+					Паркинг
+					<characteristic type="forbidden">Не е възможно паркиране.</characteristic>
+				</service>	
+				
+				<service>
+					Рецепция
+					<characteristic>Помещение за съхранение на багаж</characteristic>
+					<characteristic>Билетни услуги</characteristic>
+					<characteristic>Денонощна рецепция</characteristic>
+				</service>	
+				
+				<service>
+					Почистване
+					<characteristic>Ежедневно подреждане на стаята</characteristic>
+					<characteristic>Гладене (допълнително заплащане)</characteristic>
+					<characteristic>Химическо чистене (допълнително заплащане)</characteristic>
+					<characteristic>Пералня (допълнително заплащане)</characteristic>
+				</service>
+
+				<service>
+					Удобства за бизнеса
+					<characteristic>Факс/Копирни услуги</characteristic>
+				</service>	
+				
+				<service>
+					Общи
+					<characteristic>Превоз</characteristic>
+					<characteristic>Трансфер (допълнително заплащане)</characteristic>
+					<characteristic>Климатик</characteristic>
+					<characteristic>Отопление</characteristic>
+					<characteristic>Коли под наем</characteristic>
+					<characteristic>Шумоизолирани стаи</characteristic>
+					<characteristic>Сейф</characteristic>
+					<characteristic>Асансьор</characteristic>
+					<characteristic>Летищен трансфер</characteristic>
+					<characteristic>Рум-сървиз</characteristic>
+				</service>	
+				
+				<service>
+					Политика за пушене
+					<characteristic type="forbidden">Стаи САМО за НЕпушачи</characteristic>
+				</service>	
+				
+				<service>
+					Персоналът говори няколко езика
+					<characteristic>руски</characteristic>
+					<characteristic>английски</characteristic>
+					<characteristic>български</characteristic>
+				</service>
+			</more_info>
+			<rooms>
+				<rooms_description>
+					Двойните стаи ексклузив са с две отделни легла, някои от тях разполагат с допълнително канапе и малък балкон. Всички стаи са със самостоятелен санитарен възел с вана или душ-кабина, мини-бар, директен телефон, кабелна телевизия, интернет, климатик. Стаите са с квадратура около 23 кв. м., със северно и южно изложение, с изглед към централна градска част.
+					Двойните стаи лукс са с голяма спалня балкон, допълнително канапе, самостоятелен санитарен възел с вана, мини-бар, директен телефон, кабелна телевизия, интернет, климатик. Стаите са с квадратура около 30 кв. м., с източно и южно изложение.
+					Апартаментът разполага с три отделни помещения. Има общо 3 легла и едно канапе, самостоятелен санитарен възел с вана, мини-бар, директен телефон, кабелна телевизия, интернет, климатик. Квадратура около 46 кв. м., западно и северно изложение.
+				</rooms_description>
+				<rooms_images>
+					<room_image type="1">
+						<image_src href="lionSofRoom1"/>
+					</room_image>
+					<room_image type="2">
+						<image_src href="lionSofRoom2"/>
+					</room_image>
+				</rooms_images>
+				<room>
+					<type>Двойна стая ексклузив</type>
+					<price>
+						<season>
+							<all>69 евро</all>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Единична стая ексклузив</type>
+					<price>
+						<season>
+							<all>59 евро</all>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Двойна стая лукс</type>
+					<price>
+						<season>
+							<all>79 евро</all>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Единична стая лукс</type>
+					<price>
+						<season>
+							<all>69 евро</all>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Апартамент</type>
+					<price>
+						<season>
+							<all>99 евро</all>
+						</season>
+					</price>
+				</room>
+			</rooms>
+			<image>
+				<src href="lionSof"/>
+			</image>
+		</hotel>
+		
+<!--==================================Atlas======================================-->
+		
+		<hotel hotelID="ATLASGS" chainRef = "A" regionRef = "GS">
+			<hotel_name>Atlas Hotel </hotel_name>
+			<category>4-звезден</category>
+			<hotel_type>СПА</hotel_type>
+			<address>
+				<city>к.к. “Златни пясъци”</city>
+			</address>
+			<phone>+359 52 811 777 </phone>
+			<email>reservations@atlashotel.bg</email>
+			<site>www.atlashotel.bg/bg/</site>
+			<description>
+				Хотел Атлас се намира в курортен комплекс Златни пясъци на 350 м. югозападно от центъра на курорта и на 300 м. от плажната ивица. Изграден е през 2003 г. и разполага с всичко необходимо за осигуряване на активна и пълноценна почивка - SPA център, предлагащ разнообразни оздравителни и тонизиращи процедури, парна баня, сауна, фитнес, масаж, външен, вътрешен и детски басейн с водни пързалки, както и билярд, тенис на маса и волейболно игрище. На разположение на гостите са и фризьорски салон, денонощен лекарски кабинет и магазин за сувенири.
+			</description>
+			<more_info>
+				<service>
+					Двор / Градина
+					<characteristic>Тераса</characteristic>
+					<characteristic>Градина</characteristic>
+				</service>
+			
+				<service>
+					СПА център
+					<characteristic>Парна баня</characteristic>
+					<characteristic>Цялостен, частичен, арома масажи</characteristic>
+					<characteristic>Хидромасажни и ароматични вани</characteristic>
+					<characteristic>Масажи с мед и шоколад</characteristic>
+					<characteristic>Фризьорски салон</characteristic>
+					<characteristic>Сауна</characteristic>
+				</service>
+				
+				<service>
+					Домашни любимци
+					<characteristic type="forbidden">Домашни любимци са забранени.</characteristic>
+				</service>	
+				
+				<service>
+					Дейности
+					<characteristic>Безплатни велосипеди</characteristic>
+					<characteristic>Туризъм</characteristic>
+				</service>	
+				
+				<service>
+					Храни и напитки
+					<characteristic>Бар</characteristic>
+					<characteristic>Ресторант</characteristic>
+				</service>	
+				
+				<service>
+					Интернет
+					<characteristic>Wi-Fi интернет е наличен в целия хотел и се изисква такса</characteristic>
+				</service>	
+				
+				<service>
+					Паркинг
+					<characteristic type="forbidden">Не е възможно паркиране.</characteristic>
+				</service>	
+				
+				<service>
+					Услуги
+					<characteristic>Ежедневно почистване</characteristic>
+					<characteristic>Пералня  (допълнително заплащане)</characteristic>
+				</service>
+
+				<service>
+					Общи
+					<characteristic>WiFi срещу заплащане</characteristic>
+					<characteristic>Зона за пушачи</characteristic>
+					<characteristic>Семейни стаи</characteristic>
+				</service>	
+				
+				<service>
+					Политика за пушене
+					<characteristic type="forbidden">Стаи за НЕпушачи</characteristic>
+				</service>
+
+				<service>
+					Персоналът говори няколко езика
+					<characteristic>английски</characteristic>
+					<characteristic>български</characteristic>
+					<characteristic>руски </characteristic>
+				</service>
+			</more_info>
+			<rooms>
+				<rooms_description>
+					Комплексът  разполага с 273 стаи - 12 апартамента, 17 студия, 10 фамилни стаи и още 234 двойни стаи с великолепен изглед към парк, басейн или море. Удобна мебелировка - климатик, кабелна телевизия и личен сейф, мини бар, телефон, са само част от оборудването на всяка стая. За Ваше удобство в банята ще намерите телефон и сешоар.
+				</rooms_description>
+				<rooms_images>
+					<room_image type="1">
+						<image_src href="ATLASGoldenSandsRoom1"/>
+					</room_image>
+					<room_image type="2">
+						<image_src href="ATLASGoldenSandsRoom2"/>
+					</room_image>
+				</rooms_images>
+				<room>
+					<type>Двойна стандартна стая</type>
+					<price>
+						<season>
+							<low>72 лв.</low>
+							<medium type="1">83 лв.</medium>
+							<medium type="2">101 лв.</medium>
+							<high>131 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Студио</type>
+					<price>
+						<season>
+							<low>76 лв.</low>
+							<medium type="1">94 лв.</medium>
+							<medium type="2">117 лв.</medium>
+							<high>149 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Двойна делукс стая</type>
+					<price>
+						<season>
+							<low>72 лв.</low>
+							<medium type="1">106 лв.</medium>
+							<medium type="2">136 лв.</medium>
+							<high>228 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Фамилна стая</type>
+					<price>
+						<season>
+							<low>74 лв.</low>
+							<medium type="1">85 лв.</medium>
+							<medium type="2">108 лв.</medium>
+							<high>139 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Апартамент</type>
+					<price>
+						<season>
+							<low>83 лв.</low>
+							<medium type="1">143 лв.</medium>
+							<medium type="2">106 лв.</medium>
+							<high>195 лв.</high>
+						</season>
+					</price>
+				</room>
+			</rooms>
+			<image>
+				<src href="ATLASGoldenSands"/>
+			</image>
+		</hotel>
+		
+<!--===================================AroniaBeach==========================================-->
+		
+		<hotel hotelID="ARONIABeach" chainRef = "A" regionRef = "SB">
+			<hotel_name>Aronia Beach Hotel</hotel_name>
+			<category>4-звезден</category>
+			<hotel_type>Хотел-ресторант</hotel_type>
+			<address>
+				<city>к.к. Слънчев бряг</city>
+			</address>
+			<phone>0550 77 500</phone>
+			<email>reservations@aroniahotel.com</email>
+			<site>www.aroniahotel.com/contacts/</site>
+			<description>
+				Хотел Арония Бийч се намира в южната част на най-големия морски курорт в България - Слънчев бряг. Разположен е на първа линия непосредствено до живописните пясъчни дюни на един от най-красивите плажове по южното Черноморие. Хотелът е част от четиризвездната верига A HOTELS и предлага модерни, уютни и комфортни хотелски стаи, оборудвани с всичко необходимо за приятен и удобен престой.   
+			</description>
+			<more_info>
+				<service>
+					Двор / Градина
+					<characteristic>На първа линия </characteristic>
+					<characteristic>Тераса</characteristic>
+					<characteristic>Градина</characteristic>
+				</service>
+			
+				<service>
+					Басейн и уелнес 
+					<characteristic>Басейн</characteristic>
+					<characteristic>Плажни кърпи</characteristic>
+					<characteristic>Открит плувен басейн - сезонен</characteristic>
+					<characteristic>Закрит плувен басейн</characteristic>
+					<characteristic>Сауна</characteristic>
+				</service>
+				
+				<service>
+					Домашни любимци
+					<characteristic type="forbidden">Домашни любимци са забранени.</characteristic>
+				</service>	
+				
+				<service>
+					Дейности
+					<characteristic>Плаж</characteristic>
+					<characteristic>Аниматори</characteristic>
+					<characteristic>Тенис на маса</characteristic>
+					<characteristic>Детска площадка</characteristic>
+					<characteristic>Зала за игри</characteristic>
+				</service>	
+				
+				<service>
+					Храни и напитки
+					<characteristic>Бар</characteristic>
+					<characteristic>Ресторант - бюфет</characteristic>
+				</service>	
+				
+				<service>
+					Интернет
+					<characteristic type="free">Безплатно! Wi-Fi интернет е наличен в публични зони и е без заплащане</characteristic>
+				</service>	
+				
+				<service>
+					Паркинг
+					<characteristic type="free">Безплатно! Безплатен обществен паркинг е достъпен на място (резервация не е възможна)</characteristic>
+				</service>	
+				
+				<service>
+					Услуги
+					<characteristic>Гладене  (допълнително заплащане)</characteristic>
+					<characteristic>Химическо чистене  (допълнително заплащане)</characteristic>
+					<characteristic>Пералня  (допълнително заплащане)</characteristic>
+				</service>
+
+				<service>
+					Общи
+					<characteristic>Летищен трансфер (допълнително заплащане)</characteristic>
+					<characteristic>Вендинг машина (напитки)</characteristic>
+					<characteristic>Зона за пушачи</characteristic>
+					<characteristic>Климатик</characteristic>
+					<characteristic>Коли под наем</characteristic>
+					<characteristic>Сейф(допълнително заплащане)</characteristic>
+					<characteristic>Асансьор</characteristic>
+					<characteristic>Семейни стаи</characteristic>
+					<characteristic>Факс/Копирни услуги  (допълнително заплащане)</characteristic>
+					<characteristic>Помещение за съхранение на багаж</characteristic>
+					<characteristic>Денонощна рецепция</characteristic>
+					<characteristic>Детска площадка </characteristic>
+				</service>	
+				
+				<service>
+					Персоналът говори няколко езика
+					<characteristic>английски</characteristic>
+					<characteristic>български</characteristic>
+					<characteristic>руски </characteristic>
+				</service>
+			</more_info>
+			<rooms>
+				<rooms_description>
+					Четиризвездният Хотел Арония Бийч предлага на своите гости 229 стандартни и фамилни стаи, осигуряващи всичко необходимо за незабравима почивка. Стаите са просторни, модерно обзаведени, декорирани в цвят бордо, който прекрасно контрастира с чудесната гледка към морето и пясъчните дюни. Оборудването е с удобна мебелировка, създаваща усещане за уют и комфорт на Вашата почивка – климатик, кабелна телевизия, мини бар, телефон. За Ваше удобство банята разполага със сешоар. Непосредствената близост на хотела до плажа, морето и крайбрежните заведения прави мястото не само едно от най-живописните в Слънчев бряг, но и удобно - за удовлетворение на всеки вкус и предпочитания за забавления и развлечения край морския бряг.    
+				</rooms_description>
+				<rooms_images>
+					<room_image type="1">
+						<image_src href="ARONIARoom1"/>
+					</room_image>
+					<room_image type="2">
+						<image_src href="ARONIARoom2"/>
+					</room_image>
+				</rooms_images>
+				<room>
+					<type>Двойна стандартна стая</type>
+					<price>
+						<season>
+							<low>63 лв.</low>
+							<medium type="1">76 лв.</medium>
+							<medium type="2">92 лв.</medium>
+							<high>117 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Единична стая</type>
+					<price>
+						<season>
+							<low>63 лв.</low>
+							<medium type="1">99 лв.</medium>
+							<medium type="2">136 лв.</medium>
+							<high>193 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Фамилна стая</type>
+					<price>
+						<season>
+							<low>67 лв.</low>
+							<medium type="1">81 лв.</medium>
+							<medium type="2">96 лв.</medium>
+							<high>127 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Апартамент</type>
+					<price>
+						<season>
+							<low>85 лв.</low>
+							<medium type="1">116 лв.</medium>
+							<medium type="2">140 лв.</medium>
+							<high>175 лв.</high>
+						</season>
+					</price>
+				</room>
+			</rooms>
+			<image>
+				<src href="ARONIA"/>
+			</image>
+		</hotel>
+		
+<!--==========================Astera=====================================-->
+		
+		<hotel hotelID="ASTERABan" chainRef = "A" regionRef = "BA">
+			<hotel_name>Astera Bansko Apartment Tourist Complex And SPA</hotel_name>
+			<category>4-звезден</category>
+			<hotel_type>СПА</hotel_type>
+			<address>
+				<city>Банско</city>
+				<street>ул. Стражите №8</street>
+			</address>
+			<phone>+359 749 86 140</phone>
+			<email>reservations@asterabansko.com</email>
+			<site>www.asterabansko.com</site>
+			<description>
+				Апартаментен туристически комплекс и СПА Астера Банско е разположен в подножието на вълшебната Пирин планина, само на 200 м от първата станция на ски лифта в Банско. Комплексът е изграден в типичния за Банско стил, напомнящи за уникалните къщи от епохата на Възраждането. Астера Банско предлага на своите гости удобствата и лукса на четиризвездния хотелски престой и разполага с всичко необходимo за  една пълноценна и незабравима ваканция.
+			</description>
+			<more_info>
+				<service>
+					Двор / Градина
+					<characteristic>Тераса</characteristic>
+				</service>
+			
+				<service>
+					Басейн и уелнес
+					<characteristic>Басейн</characteristic>
+					<characteristic>Открит плувен басейн</characteristic>
+					<characteristic>Закрит плувен басейн</characteristic>
+					<characteristic>Турска/Парна баня  (допълнително заплащане)</characteristic>
+					<characteristic>Хидромасажна вана/ джакузи  (допълнително заплащане</characteristic>
+					<characteristic>Масаж  (допълнително заплащане)</characteristic>
+					<characteristic>Спа и Уелнес център  (допълнително заплащане) </characteristic>
+					<characteristic>Солариум  (допълнително заплащане)</characteristic>
+					<characteristic>Фитнес център</characteristic>
+					<characteristic>Сауна  (допълнително заплащане)</characteristic>
+				</service>
+				
+				<service>
+					Домашни любимци
+					<characteristic type="forbidden">Домашни любимци са забранени.</characteristic>
+				</service>	
+				
+				<service>
+					Дейности
+					<characteristic>Тенис на маса  (допълнително заплащане)</characteristic>
+					<characteristic>Билярд  (допълнително заплащане)</characteristic>
+				</service>	
+				
+				<service>
+					Храни и напитки
+					<characteristic>Ресторант</characteristic>
+					<characteristic>Бар</characteristic>
+					<characteristic>Закуска в стаята</characteristic>
+				</service>	
+				
+				<service>
+					Интернет
+					<characteristic type="free">Безплатно! Wi-Fi интернет е наличен в хотелските стаи и е без заплащане.</characteristic>
+				</service>	
+				
+				<service>
+					Паркинг
+					<characteristic>Частен паркинг е достъпен на място (необходима е резервация) и цената е EUR 2,50 на ден.</characteristic>
+				</service>	
+				
+				<service>
+					Услуги
+					<characteristic>Факс/Копирни услуги  (допълнително заплащане)</characteristic>
+					<characteristic>Конферентна/Банкетна зала  (допълнително заплащане)</characteristic>
+					<characteristic>Билетни услуги</characteristic>
+					<characteristic>Обменно бюро</characteristic>
+					<characteristic>Денонощна рецепция</characteristic>
+					<characteristic>Гледане на деца  (допълнително заплащане) </characteristic>
+					<characteristic>Гладене  (допълнително заплащане) </characteristic>
+					<characteristic>Химическо чистене  (допълнително заплащане) </characteristic>
+					<characteristic>Пералня  (допълнително заплащане)  </characteristic>
+				</service>
+
+				<service>
+					Общи
+					<characteristic>Коли под наем</characteristic>
+					<characteristic>Магазин за сувенири и подаръци</characteristic>
+					<characteristic>Сейф (допълнително заплащане)</characteristic>
+					<characteristic>Семейни стаи</characteristic>
+					<characteristic>Асансьор</characteristic>
+					<characteristic>Фризьорски / Козметичен салон</characteristic>
+					<characteristic>Стаи/Услуги за хора с двигателни увреждания</characteristic>
+					<characteristic>Рум-сървиз</characteristic>
+				</service>	
+				
+				<service>
+					Политика за пушене
+					<characteristic type="forbidden">Стаи за НЕпушачи</characteristic>
+				</service>
+
+				<service>
+					Персоналът говори няколко езика
+					<characteristic>английски</characteristic>
+					<characteristic>български</characteristic>
+				</service>
+			</more_info>
+			<rooms>
+				<rooms_description>
+					Хотелът разполага с 277 просторни стаи, предлагащи изискан лукс и условия за пълноценна почивка. Обзавеждането е съобразено с най-новите модни тенденции. Като естествено продължение на модерния и стилен дизайн на Хотел и СПА Астера са ексклузивните апартаменти, които предлагат изключителна изискана атмосфера и специално подбрани услуги.
+				</rooms_description>
+				<rooms_images>
+					<room_image type="1">
+						<image_src href="ASTERARoom1"/>
+					</room_image>
+					<room_image type="2">
+						<image_src href="ASTERARoom2"/>
+					</room_image>
+				</rooms_images>
+				<room>
+					<type>Двойна стандартна стая</type>
+					<price>
+						<season>
+							<low>78 лв.</low>
+							<medium type="1">97 лв.</medium>
+							<high>108 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Единична стая</type>
+					<price>
+						<season>
+							<low>104 лв.</low>
+							<medium type="1">132 лв.</medium>
+							<high>158 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Апартамент с една спалня</type>
+					<price>	
+						<season>
+							<low>120 лв.</low>
+							<medium type="1">149 лв.</medium>
+							<high>170 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Апартамент с две спални</type>
+					<price>
+						<season>
+							<low>144 лв.</low>
+							<medium type="1">173 лв.</medium>
+							<high>197 лв.</high>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Апартамент с три спални</type>
+					<price>
+						<season>
+							<low>810 лв.</low>
+							<medium type="1">910 лв.</medium>
+							<high>1010 лв.</high>
+						</season>
+					</price>
+				</room>
+			</rooms>
+			<image>
+				<src href="ASTERA"/>
+			</image>
+		</hotel>
+		
+<!--=================================Rostov=================================-->
+		
+		<hotel hotelID="ROSTOVPle" regionRef = "EN">
+			<hotel_name>Rostov Hotel</hotel_name>
+			<category>4-звезден</category>
+			<hotel_type>Хотел-ресторант</hotel_type>
+			<address>
+				<city>Плевен</city>
+				<street>ул. „Цар Борис III“ 2</street>
+			</address>
+			<phone>+359 878440001</phone>
+			<email> hotel@rostov.bg</email>
+			<site>www.rostov.bg/</site>
+			<description>
+				Хотел „Ростов“  е разположен в центъра на град Плевен, в непосредствена близост до административните сгради на институции, до банкови клонове, търговски обекти и централен МОЛ, театър, галерии, музеи и архитектурни паметници. Сградата му е емблематична за областния град. Впечатлява не само с размера си, но и с факта, че е първата проектирана по френска технология.
+			</description>
+			<more_info>
+				<service>
+					Двор / Градина
+					<characteristic>Градина</characteristic>
+				</service>
+				
+				<service>
+					Домашни любимци
+					<characteristic type="forbidden">Домашни любимци са забранени.</characteristic>
+				</service>	
+				
+				<service>
+					Дейности
+					<characteristic>Нощен клуб / DJ  (допълнително заплащане)</characteristic>
+					<characteristic>Казино</characteristic>
+				</service>	
+				
+				<service>
+					Храни и напитки
+					<characteristic>Ресторант (а-ла-карт)</characteristic>
+					<characteristic>Закуска в стаята</characteristic>
+					<characteristic>Бар</characteristic>
+				</service>	
+				
+				<service>
+					Интернет
+					<characteristic type="free">Безплатно! Wi-Fi интернет е наличен в хотелските стаи и е без заплащане.</characteristic>
+				</service>	
+				
+				<service>
+					Паркинг
+					<characteristic type="free">Безплатно! Безплатен частен паркинг е достъпен на място (резервация не е необходима).</characteristic>
+					<characteristic>Паркинг на улицата</characteristic>
+				</service>	
+				
+				<service>
+					Услуги
+					<characteristic>Ежедневно подреждане на стаята</characteristic>
+					<characteristic>Помещение за съхранение на багаж </characteristic>
+					<characteristic>Факс/Копирни услуги  (допълнително заплащане)</characteristic>
+					<characteristic>Гладене  (допълнително заплащане) </characteristic>
+					<characteristic>Химическо чистене  (допълнително заплащане)</characteristic>
+					<characteristic>Пералня  (допълнително заплащане)</characteristic>
+					<characteristic>Конферентна/Банкетна зала  (допълнително заплащане)</characteristic>
+					<characteristic>Денонощна рецепция</characteristic>
+					<characteristic>Рум-сървиз</characteristic>
+				</service>
+
+				<service>
+					Общи
+					<characteristic>Магазини в хотела</characteristic>
+					<characteristic>Сейф (допълнително заплащане)</characteristic>
+					<characteristic>Семейни стаи</characteristic>
+					<characteristic>Стаи за непушачи </characteristic>
+					<characteristic>Асансьор</characteristic>
+					<characteristic>Отопление</characteristic>
+				</service>	
+				
+				<service>
+					Политика за пушене
+					<characteristic type="forbidden">Стаи за НЕпушачи</characteristic>
+				</service>
+
+				<service>
+					Персоналът говори няколко езика
+					<characteristic>английски</characteristic>
+					<characteristic>български</characteristic>
+				</service>
+			</more_info>
+			<rooms>
+				<rooms_description>
+					Хотел Ростов се намира в центъра на Плевен. Предоставя добре оборудвани стаи с панорамна гледка и безплатен WiFi интернет. Стаите в хотел Ростов имат климатик, телевизор с кабелни канали и кът за сядане. Баните са с душ и безплатни тоалетни принадлежности. Хотела разполага с възможности за настаняване на своите гости в единични и двойни стаи, апартаменти и една стая -тип студио. Апартаментите са стандартни представляват две самостоятелни части - хол и спалня и два санитарни възела. Стаята тип студио се състои от стая с по-комфортно оборудване и по-широко легло. Единичната стая лукс пък е с елегантно оборудване. Стаята разполага с удобно и широко легло, телевизор, мини бар и изглед към търговската част на града. Допълнително удобство е климатика във стаята и достъпа до интернет през безжична мрежа.
+				</rooms_description>
+				<rooms_images>
+					<room_image type="1">
+						<image_src href="ROSTOVRoom1"/>
+					</room_image>
+					<room_image type="2">
+						<image_src href="ROSTOVRoom2"/>
+					</room_image>
+				</rooms_images>
+				<room>
+					<type>Двойна стандартна стая</type>
+					<price>
+						<season>
+							<all>78 лв.</all>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Двойна стая делукс</type>
+					<price>
+						<season>
+							<all>88 лв.</all>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Единична стая стандарт</type>
+					<price>
+						<season>
+							<all>60 лв.</all>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Единична стая делукс</type>
+					<price>
+						<season>
+							<all>70 лв.</all>
+						</season>
+					</price>
+				</room>
+				<room>
+					<type>Апартамент</type>
+					<price>
+						<season>
+							<all>100 лв.</all>
+						</season>
+					</price>
+				</room>
+			</rooms>
+			<image>
+				<src href="ROSTOV"/>
+			</image>
+		</hotel>
+	</hotels>
+</catalogue>

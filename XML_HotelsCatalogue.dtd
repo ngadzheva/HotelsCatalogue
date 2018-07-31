@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!ELEMENT catalogue (regions, chains, hotels)>
+	<!ELEMENT regions (region+)>
+	<!ELEMENT region (region_name)>
+	<!ATTLIST region regionID ID #REQUIRED>
+	<!ATTLIST region hotelRef IDREFS #IMPLIED>
+	<!ELEMENT region_name (#PCDATA)>
+	<!ELEMENT chains (chain+)>
+	<!ELEMENT chain (chain_name, chain_description?, chain_logo?)>
+	<!ATTLIST chain chainID ID #REQUIRED>
+	<!ATTLIST chain hotelRef IDREFS #IMPLIED>
+	<!ELEMENT chain_name (#PCDATA)>
+	<!ELEMENT chain_description (#PCDATA)>
+	<!ELEMENT chain_logo (logo?)>
+	<!ELEMENT logo EMPTY>
+	<!ATTLIST logo href ENTITY #REQUIRED>
+	<!ELEMENT hotels (hotel+)>
+	<!ELEMENT hotel (hotel_name, category, hotel_type, address, phone?, email?, site?, description?, more_info?, rooms?, image?)>
+	<!ATTLIST hotel photo ENTITY #IMPLIED>
+	<!ATTLIST hotel hotelID ID #REQUIRED>
+	<!ATTLIST hotel chainRef IDREF #IMPLIED>
+	<!ATTLIST hotel regionRef IDREF #IMPLIED>
+	<!ELEMENT hotel_name (#PCDATA)>
+	<!ELEMENT category (#PCDATA)>
+	<!ELEMENT hotel_type (#PCDATA)>
+	<!ELEMENT address (city, street?)>
+	<!ELEMENT city (#PCDATA)>
+	<!ELEMENT street (#PCDATA)>
+	<!ELEMENT phone (#PCDATA)>
+	<!ELEMENT email (#PCDATA)>
+	<!ELEMENT site (#PCDATA)>
+	<!ELEMENT description (#PCDATA)>
+	<!ELEMENT more_info (service)*>
+	<!ELEMENT service (#PCDATA | characteristic)*>
+	<!ELEMENT characteristic (#PCDATA)>
+	<!ATTLIST characteristic type CDATA #IMPLIED>
+	<!ELEMENT rooms (rooms_description?, rooms_images?, room+)>
+	<!ELEMENT rooms_description (#PCDATA)>
+	<!ELEMENT rooms_images (room_image+)>
+	<!ELEMENT room_image (image_src)>
+	<!ATTLIST room_image type CDATA #IMPLIED>
+	<!ELEMENT image_src EMPTY>
+	<!ATTLIST image_src href ENTITY #REQUIRED>
+	<!ELEMENT image (src)>
+	<!ELEMENT src EMPTY>
+	<!ATTLIST src href ENTITY #REQUIRED>
+	<!ELEMENT room (type, price)>
+	<!ELEMENT type (#PCDATA)>
+	<!ELEMENT price (season)>
+	<!ELEMENT season (low?, medium*, high?, all?)>
+	<!ELEMENT low (#PCDATA)>
+	<!ELEMENT medium (#PCDATA)>
+	<!ATTLIST medium type CDATA #IMPLIED>
+	<!ELEMENT high (#PCDATA)>
+	<!ELEMENT all (#PCDATA)>
+	<!NOTATION jpg PUBLIC "jpg viewer">
